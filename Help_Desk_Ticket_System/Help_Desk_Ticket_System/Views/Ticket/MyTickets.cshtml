@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Help_Desk_Ticket_System.Models.Ticket>
+
+@{
+    ViewData["Title"] = "My Tickets";
+}
+
+<h2>My Tickets</h2>
+
+
+<div class="mb-3">
+    <input type="text" id="searchBox" class="form-control" placeholder="Search tickets...">
+    <select id="statusFilter" class="form-control mt-2">
+        <option value="">Filter by Status</option>
+        <option value="Open">Open</option>
+        <option value="In Progress">In Progress</option>
+        <option value="Resolved">Resolved</option>
+    </select>
+</div>
+
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Date Submitted</th>
+            <th>Assigned Admin</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in Model)
+        {
+            <tr>
+                <td>@ticket.Title</td>
+                <td>@ticket.Description</td>
+                <td><span class="badge bg-@(ticket.Priority == "High" ? "danger" : ticket.Priority == "Medium" ? "warning" : "success")">@ticket.Priority</span></td>
+                <td><span class="badge bg-@(ticket.Status == "Resolved" ? "success" : ticket.Status == "In Progress" ? "warning" : "secondary")">@ticket.Status</span></td>
+                <td>@ticket.DateSubmitted.ToString("yyyy-MM-dd")</td>
+                <td>@(ticket.AssignedAdmin != null ? ticket.AssignedAdmin.Name : "Not Assigned")</td>
+                <td>
+                    <a class="btn btn-info btn-sm" asp-controller="Ticket" asp-action="Details" asp-route-id="@ticket.Id">View</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    document.getElementById("searchBox").addEventListener("input", function () {
+        var searchText = this.value.toLowerCase();
+        document.querySelectorAll("tbody tr").forEach(row => {
+            var title = row.cells[0].innerText.toLowerCase();
+            row.style.display = title.includes(searchText) ? "" : "none";
+        });
+    });
+
+    document.getElementById("statusFilter").addEventListener("change", function () {
+        var selectedStatus = this.value;
+        document.querySelectorAll("tbody tr").forEach(row => {
+            var status = row.cells[3].innerText;
+            row.style.display = selectedStatus === "" || status === selectedStatus ? "" : "none";
+        });
+    });
+</script>

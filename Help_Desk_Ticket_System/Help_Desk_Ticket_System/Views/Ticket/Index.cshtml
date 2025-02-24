@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Help_Desk_Ticket_System.Models.Ticket>
+
+@{
+    ViewData["Title"] = "Manage Tickets";
+}
+<h2>All Tickets</h2>
+<div class="mb-3">
+    <form asp-action="Index" method="get">
+        <div class="row">
+           
+            <div class="col-md-4">
+                <input type="text" name="search" class="form-control" placeholder="Search by Title" value="@Context.Request.Query["search"]" />
+            </div>
+
+           
+            <div class="col-md-3">
+                <select name="status" class="form-control">
+                    <option value="">All Statuses</option>
+                    @foreach (var status in ViewBag.Statuses)
+                    {
+                        <option value="@status" selected="@(Context.Request.Query["status"] == status ? "selected" : null)">@status</option>
+                    }
+                </select>
+            </div>
+
+           
+            <div class="col-md-2">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Status</th>
+            <th>Category</th>
+            <th>User Name</th>
+            <th>Date Submitted</th>
+            <th>Assigned Admin</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in Model)
+        {
+            <tr>
+                <td>@ticket.Title</td>
+                <td>@ticket.Description</td>
+                <td>
+                 @ticket.Priority
+
+                </td>
+                <td>
+                    @ticket.Status
+                </td>
+                <td>@ticket.Category</td>
+                <td>@(ticket.User != null ? ticket.User.Name : "Unknown")</td>
+                <td>@ticket.DateSubmitted.ToString("yyyy-MM-dd")</td>
+                <td>@(ticket.AssignedAdmin != null ? ticket.AssignedAdmin.Name : "Not Assigned")</td>
+                <td>
+                    <a class="btn btn-info btn-sm" asp-controller="Ticket" asp-action="Details" asp-route-id="@ticket.Id">View</a>
+                    <a class="btn btn-warning btn-sm" asp-controller="Ticket" asp-action="Edit" asp-route-id="@ticket.Id">Edit</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

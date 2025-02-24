@@ -1,0 +1,63 @@
+﻿@model Help_Desk_Ticket_System.Models.Ticket
+
+@{
+    ViewData["Title"] = "Ticket Details";
+}
+
+<h2>Ticket Details</h2>
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">@Model.Title</h5>
+        <p class="card-text"><strong>Description:</strong> @Model.Description</p>
+        <p><strong>Priority:</strong> <span class="badge bg-@(Model.Priority == "High" ? "danger" : Model.Priority == "Medium" ? "warning" : "success")">@Model.Priority</span></p>
+        <p><strong>Status:</strong> <span class="badge bg-@(Model.Status == "Resolved" ? "success" : Model.Status == "In Progress" ? "warning" : "secondary")">@Model.Status</span></p>
+        <p><strong>Assigned Admin:</strong> @(Model.AssignedAdmin != null ? Model.AssignedAdmin.Name : "Not Assigned")</p>
+
+        <h4>Comments</h4>
+        <div id="commentsSection">
+            @foreach (var comment in Model.Comments)
+            {
+                <div class="alert alert-secondary">
+                    <strong>@comment.User.Name:</strong> @Html.Raw(comment.TicketComment) <br>
+                    <small class="text-muted">@comment.DatePosted.ToString("yyyy-MM-dd HH:mm")</small>
+                </div>
+            }
+        </div>
+
+        
+        <div class="mt-3">
+            <textarea id="commentText" class="form-control" placeholder="Write a comment..."></textarea>
+            <button class="btn btn-primary mt-2" onclick="addComment(@Model.Id)">Add Comment</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function addComment(ticketId) {
+        let commentText = document.getElementById("commentText").value.trim();
+        if (commentText === "") {
+            alert("Comment cannot be empty.");
+            return;
+        }
+
+        fetch("/Ticket/AddComment", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ ticketId: ticketId, commentText: commentText })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                let commentHTML = `<div class="alert alert-secondary">
+                    <strong>${data.user}:</strong> ${data.comment} <br>
+                    <small class="text-muted">${data.date}</small>
+                </div>`;
+                document.getElementById("commentsSection").innerHTML += commentHTML;
+                document.getElementById("commentText").value = "";
+            } else {
+                alert("Error adding comment.");
+            }
+        });
+    }
+</script>
