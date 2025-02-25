@@ -565,3 +565,4 @@ D:\Help Desk Ticket System\Help_Desk_Ticket_System\Help_Desk_Ticket_System\obj\D
 D:\Help Desk Ticket System\Help_Desk_Ticket_System\Help_Desk_Ticket_System\obj\Debug\net8.0\Help_Desk_Ticket_System.pdb
 D:\Help Desk Ticket System\Help_Desk_Ticket_System\Help_Desk_Ticket_System\obj\Debug\net8.0\Help_Desk_Ticket_System.genruntimeconfig.cache
 D:\Help Desk Ticket System\Help_Desk_Ticket_System\Help_Desk_Ticket_System\obj\Debug\net8.0\ref\Help_Desk_Ticket_System.dll
+D:\Help Desk Ticket System\Help_Desk_Ticket_System\Help_Desk_Ticket_System\obj\Debug\net8.0\Help_Desk_Ticket_System.sourcelink.json

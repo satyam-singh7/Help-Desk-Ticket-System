@@ -1,0 +1,114 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h2>Admin Dashboard</h2>
+
+<!-- Summary Cards -->
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-header">Total Tickets</div>
+            <div class="card-body">
+                <h4 class="card-title">@Model.TotalTickets</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-warning mb-3">
+            <div class="card-header">Pending Tickets</div>
+            <div class="card-body">
+                <h4 class="card-title">@Model.PendingTickets</h4>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-header">Resolved Tickets</div>
+            <div class="card-body">
+                <h4 class="card-title">@Model.ResolvedTickets</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Filters -->
+<form asp-action="AdminDashboard" method="get">
+    <div class="row mb-3">
+        <div class="col-md-3">
+            <select name="status" class="form-control">
+                <option value="">Filter by Status</option>
+                @foreach (var status in ViewBag.Statuses)
+                {
+                    <option value="@status">@status</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select name="priority" class="form-control">
+                <option value="">Filter by Priority</option>
+                @foreach (var priority in ViewBag.Priorities)
+                {
+                    <option value="@priority">@priority</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-3">
+            <select name="assignedAdmin" class="form-control">
+                <option value="">Filter by Assigned Admin</option>
+                @foreach (var admin in ViewBag.Admins)
+                {
+                    <option value="@admin.Value">@admin.Text</option>
+                }
+            </select>
+        </div>
+        <div class="col-md-3">
+            <button type="submit" class="btn btn-primary">Apply Filters</button>
+        </div>
+    </div>
+</form>
+
+<!-- Charts -->
+<div class="row">
+    <div class="col-md-6">
+        <canvas id="ticketsByCategory"></canvas>
+    </div>
+    <div class="col-md-6">
+        <canvas id="ticketsByAdmin"></canvas>
+    </div>
+</div>
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+    var ticketsByCategory = @Html.Raw(Json.Serialize(Model.TicketsByCategory));
+    var ticketsByAdmin = @Html.Raw(Json.Serialize(Model.TicketsByAdmin));
+
+    var ctx1 = document.getElementById('ticketsByCategory').getContext('2d');
+    new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ticketsByCategory.map(x => x.Category),
+            datasets: [{
+                label: 'Tickets by Category',
+                data: ticketsByCategory.map(x => x.Count),
+                backgroundColor: 'rgba(54, 162, 235, 0.6)'
+            }]
+        }
+    });
+
+    var ctx2 = document.getElementById('ticketsByAdmin').getContext('2d');
+    new Chart(ctx2, {
+        type: 'pie',
+        data: {
+            labels: ticketsByAdmin.map(x => x.Admin),
+            datasets: [{
+                label: 'Tickets Resolved per Admin',
+                data: ticketsByAdmin.map(x => x.Count),
+                backgroundColor: ['#ff6384', '#36a2eb', '#ffcd56']
+            }]
+        }
+    });
+</script>
+
+

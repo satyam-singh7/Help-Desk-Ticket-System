@@ -186,9 +186,7 @@ namespace Help_Desk_Ticket_System.Controllers
             _context.SaveChanges();
 
             var admin = _context.Users.Find(ticket.AssignedAdminId);
-            var user = _context.Users.Find(ticket.UserId);
-
-            // Send email to the admin if a new admin is assigned
+            var user = _context.Users.Find(ticket.UserId);            
             if (isAssignedAdminChanged && admin != null)
             {
                 string subject = "New Ticket Assigned";
@@ -201,11 +199,7 @@ namespace Help_Desk_Ticket_System.Controllers
 
                 _emailService.SendEmail(admin.Email, subject, body);
             }
-
-            // Step 1: Fetch user's email from the database using UserId
-            var userEmail = user?.Email;
-
-            // Send email to the user if the ticket status is updated or any other detail is changed
+            var userEmail = user?.Email;            
             if (user != null && (isAssignedAdminChanged || isStatusChanged))
             {
                 string subject = "Ticket Status Updated";
@@ -220,5 +214,40 @@ namespace Help_Desk_Ticket_System.Controllers
 
             return RedirectToAction("Index");
         }
+        public IActionResult AdminDashboard()
+        {
+            var totalTickets = _context.Tickets.Count();
+            var pendingTickets = _context.Tickets.Count(t => t.Status == "Pending");
+            var resolvedTickets = _context.Tickets.Count(t => t.Status == "Resolved");
+
+            var ticketsByCategory = _context.Tickets
+                .GroupBy(t => t.Category)
+                .Select(g => new { Category = g.Key, Count = g.Count() })
+                .ToList();
+
+            var ticketsByAdmin = _context.Tickets
+                .Where(t => t.AssignedAdminId != null)
+                .GroupBy(t => t.AssignedAdmin.Name)
+                .Select(g => new { Admin = g.Key, Count = g.Count() })
+                .ToList();
+
+            var statuses = _context.Tickets.Select(t => t.Status).Distinct().ToList();
+            var priorities = _context.Tickets.Select(t => t.Priority).Distinct().ToList();
+            var admins = _context.Users.Where(u => u.Role == "Admin").ToList();
+
+            ViewBag.Statuses = new SelectList(statuses);
+            ViewBag.Priorities = new SelectList(priorities);
+            ViewBag.Admins = new SelectList(admins, "Id", "Name");
+
+            return View(new
+            {
+                TotalTickets = totalTickets,
+                PendingTickets = pendingTickets,
+                ResolvedTickets = resolvedTickets,
+                TicketsByCategory = ticketsByCategory,
+                TicketsByAdmin = ticketsByAdmin
+            });
+        }
+
     }
 }
