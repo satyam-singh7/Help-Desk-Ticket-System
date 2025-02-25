@@ -3,21 +3,26 @@
 @{
     ViewData["Title"] = "Manage Tickets";
 }
+
 <h2>All Tickets</h2>
+
 <div class="mb-3">
     <form asp-action="Index" method="get">
-        <div class="row">
-           
-            <div class="col-md-4">
-                <input type="text" name="search" class="form-control" placeholder="Search by Title" value="@Context.Request.Query["search"]" />
-            </div>        
+        <div class="row">           
+            <div class="col-md-3">
+                <select name="status" class="form-control">
+                    <option value="">All Statuses</option>
+                    <option value="Open" selected="@(Context.Request.Query["status"] == "Open" ? "selected" : null)">Open</option>
+                    <option value="In Progress" selected="@(Context.Request.Query["status"] == "In Progress" ? "selected" : null)">In Progress</option>
+                    <option value="Resolved" selected="@(Context.Request.Query["status"] == "Resolved" ? "selected" : null)">Resolved</option>
+                </select>
+            </div>      
             <div class="col-md-2">
                 <button type="submit" class="btn btn-primary">Search</button>
             </div>
         </div>
     </form>
 </div>
-
 <table class="table table-bordered" id="tbl">
     <thead class="thead-dark">
         <tr>
@@ -38,13 +43,8 @@
             <tr>
                 <td>@ticket.Title</td>
                 <td>@ticket.Description</td>
-                <td>
-                 @ticket.Priority
-
-                </td>
-                <td>
-                    @ticket.Status
-                </td>
+                <td>@ticket.Priority</td>
+                <td>@ticket.Status</td>
                 <td>@ticket.Category</td>
                 <td>@(ticket.User != null ? ticket.User.Name : "Unknown")</td>
                 <td>@ticket.DateSubmitted.ToString("yyyy-MM-dd")</td>
@@ -57,11 +57,20 @@
         }
     </tbody>
 </table>
+
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
 
 <script>  
     $(document).ready(function () {
-        $('#tbl').DataTable();
+        $('#tbl').DataTable({
+            "pageLength": 10, 
+            "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]], 
+            "order": [[6, "desc"]],
+            "columnDefs": [
+                { "orderable": false, "targets": [8] } 
+            ]
+        });
     });
 </script>

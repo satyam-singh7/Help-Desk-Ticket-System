@@ -3,12 +3,50 @@
   "WorkspaceRootPath": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\views\\ticket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\views\\ticket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\controllers\\ticketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/db_Help_desk/True/SqlTable/dbo.Comments.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/db_Help_desk/True/SqlTable/dbo.Tickets.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\views\\ticket\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\views\\ticket\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\views\\ticket\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\views\\ticket\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\views\\ticket\\mytickets.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\views\\ticket\\mytickets.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -27,36 +65,8 @@
       "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\views\\ticket\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\views\\ticket\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\views\\ticket\\mytickets.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\views\\ticket\\mytickets.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\views\\ticket\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\views\\ticket\\admindashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\service\\iservice\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\service\\iservice\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|d:\\help desk ticket system\\help_desk_ticket_system\\help_desk_ticket_system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E83FCEEC-4B8B-4933-91B7-E670DAB45C89}|Help_Desk_Ticket_System\\Help_Desk_Ticket_System.csproj|solutionrelative:help_desk_ticket_system\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/db_Help_desk/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
@@ -81,7 +91,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -93,72 +103,56 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Help_Desk_Ticket_System\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-25T13:04:03.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.Tickets [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/db_Help_desk/True/SqlTable/dbo.Tickets.sql",
+              "ToolTip": "dbo.Tickets [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-25T12:50:09.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "TicketController.cs",
               "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Controllers\\TicketController.cs",
               "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Controllers\\TicketController.cs",
               "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Controllers\\TicketController.cs",
               "RelativeToolTip": "Help_Desk_Ticket_System\\Controllers\\TicketController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAnwBYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T06:54:55.075Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Program.cs",
-              "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Program.cs",
-              "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Program.cs",
-              "RelativeToolTip": "Help_Desk_Ticket_System\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T16:28:16.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\Details.cshtml",
-              "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Views\\Ticket\\Details.cshtml",
-              "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\Details.cshtml",
-              "RelativeToolTip": "Help_Desk_Ticket_System\\Views\\Ticket\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-24T09:18:29.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\Index.cshtml",
               "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Views\\Ticket\\Index.cshtml",
               "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\Index.cshtml",
               "RelativeToolTip": "Help_Desk_Ticket_System\\Views\\Ticket\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAwwEsAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-24T11:16:38.063Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MyTickets.cshtml",
-              "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\MyTickets.cshtml",
-              "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Views\\Ticket\\MyTickets.cshtml",
-              "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\MyTickets.cshtml",
-              "RelativeToolTip": "Help_Desk_Ticket_System\\Views\\Ticket\\MyTickets.cshtml",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-24T07:21:23.349Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 10,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Models\\User.cs",
               "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Models\\User.cs",
@@ -171,33 +165,95 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
+              "Title": "AdminDashboard.cshtml",
+              "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\AdminDashboard.cshtml",
+              "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Views\\Ticket\\AdminDashboard.cshtml",
+              "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\AdminDashboard.cshtml",
+              "RelativeToolTip": "Help_Desk_Ticket_System\\Views\\Ticket\\AdminDashboard.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-24T19:36:43.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\Details.cshtml",
+              "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Views\\Ticket\\Details.cshtml",
+              "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\Details.cshtml",
+              "RelativeToolTip": "Help_Desk_Ticket_System\\Views\\Ticket\\Details.cshtml",
+              "ViewState": "AgIAADkAAAAAAAAAAAAAACEAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-24T09:18:29.844Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Controllers\\AccountController.cs",
               "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Help_Desk_Ticket_System\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACYAAAAAOTMzMzPxvzcAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-24T06:21:25.147Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Help_Desk_Ticket_System\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABwAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-24T08:58:22.792Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Help_Desk_Ticket_System\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T15:12:48.374Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "dbo.Comments [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/db_Help_desk/True/SqlTable/dbo.Comments.sql",
+              "ToolTip": "dbo.Comments [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-02-25T12:50:50.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MyTickets.cshtml",
+              "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\MyTickets.cshtml",
+              "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Views\\Ticket\\MyTickets.cshtml",
+              "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\MyTickets.cshtml",
+              "RelativeToolTip": "Help_Desk_Ticket_System\\Views\\Ticket\\MyTickets.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAwwFQAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-24T07:21:23.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\appsettings.json",
               "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\appsettings.json",
@@ -210,7 +266,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "EmailService.cs",
               "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Service\\EmailService.cs",
               "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Service\\EmailService.cs",
@@ -223,7 +279,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Program.cs",
+              "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Program.cs",
+              "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Program.cs",
+              "RelativeToolTip": "Help_Desk_Ticket_System\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T16:28:16.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\Edit.cshtml",
               "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Views\\Ticket\\Edit.cshtml",
@@ -236,7 +305,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "IEmailService.cs",
               "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Service\\IService\\IEmailService.cs",
               "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Service\\IService\\IEmailService.cs",
@@ -249,20 +318,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AdminDashboard.cshtml",
-              "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\AdminDashboard.cshtml",
-              "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Views\\Ticket\\AdminDashboard.cshtml",
-              "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\AdminDashboard.cshtml",
-              "RelativeToolTip": "Help_Desk_Ticket_System\\Views\\Ticket\\AdminDashboard.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-24T19:36:43.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "Ticket.cs",
               "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Models\\Ticket.cs",
               "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Models\\Ticket.cs",
@@ -275,7 +331,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "Comment.cs",
               "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Models\\Comment.cs",
               "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Models\\Comment.cs",
@@ -288,29 +344,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Help_Desk_Ticket_System\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAiwBAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-24T15:12:48.374Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "dbo.Users.sql",
+              "DocumentIndex": 17,
+              "Title": "dbo.Users [Data]",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/db_Help_desk/True/SqlTable/dbo.Users.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/db_Help_desk/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
               "WhenOpened": "2025-02-24T08:22:33.69Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 18,
               "Title": "Create.cshtml",
               "DocumentMoniker": "D:\\Help Desk Ticket System\\Help_Desk_Ticket_System\\Help_Desk_Ticket_System\\Views\\Ticket\\Create.cshtml",
               "RelativeDocumentMoniker": "Help_Desk_Ticket_System\\Views\\Ticket\\Create.cshtml",

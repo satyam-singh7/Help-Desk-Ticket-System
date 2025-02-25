@@ -1,6 +1,9 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Help_Desk_Ticket_System.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Help_Desk_Ticket_System.Data;
 
 namespace Help_Desk_Ticket_System.Controllers;
 
@@ -11,13 +14,13 @@ public class HomeController : Controller
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
+        
     }
 
     public IActionResult Index()
     {
         return View();
-    }
-
+    }   
     public IActionResult Privacy()
     {
         return View();

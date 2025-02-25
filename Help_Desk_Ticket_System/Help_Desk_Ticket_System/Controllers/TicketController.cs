@@ -266,7 +266,6 @@ namespace Help_Desk_Ticket_System.Controllers
                 .GroupBy(t => t.AssignedAdmin.Name)
                 .Select(g => new { Admin = g.Key, Count = g.Count() })
                 .ToList();
-
             ViewBag.Statuses = new SelectList(_context.Tickets.Select(t => t.Status).Distinct().ToList());
             ViewBag.Priorities = new SelectList(_context.Tickets.Select(t => t.Priority).Distinct().ToList());
             ViewBag.Admins = new SelectList(_context.Users.Where(u => u.Role == "Admin"), "Id", "Name");

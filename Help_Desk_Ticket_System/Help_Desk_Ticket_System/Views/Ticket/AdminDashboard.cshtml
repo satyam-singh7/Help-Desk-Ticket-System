@@ -4,8 +4,6 @@
 }
 
 <h2>Admin Dashboard</h2>
-
-<!-- Summary Cards -->
 <div class="row">
     <div class="col-md-4">
         <div class="card bg-primary text-white">
@@ -32,26 +30,22 @@
         </div>
     </div>
 </div>
-
-<!-- Filters -->
 <form asp-action="AdminDashboard" method="get" class="mt-3">
     <div class="row">
         <div class="col-md-3">
             <select name="status" class="form-control">
                 <option value="">Filter by Status</option>
-                @foreach (var status in ViewBag.Statuses)
-                {
-                    <option value="@status">@status</option>
-                }
+                <option value="Open">Open</option>
+                <option value="In Progress">In Progress</option>
+                <option value="Resolved">Resolved</option>
             </select>
         </div>
         <div class="col-md-3">
             <select name="priority" class="form-control">
                 <option value="">Filter by Priority</option>
-                @foreach (var priority in ViewBag.Priorities)
-                {
-                    <option value="@priority">@priority</option>
-                }
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
             </select>
         </div>
         <div class="col-md-3">
@@ -68,8 +62,6 @@
         </div>
     </div>
 </form>
-
-<!-- Tickets Table -->
 <table class="table table-striped mt-3">
     <thead>
         <tr>
@@ -95,38 +87,22 @@
         }
     </tbody>
 </table>
-
-<!-- Charts Section -->
-<div class="row mt-4">
-    <div class="col-md-6">
-        <h4>Tickets by Category</h4>
-        <canvas id="categoryChart"></canvas>
-    </div>
-    <div class="col-md-6">
-        <h4>Tickets Resolved per Admin</h4>
-        <canvas id="adminChart"></canvas>
-    </div>
-</div>
-
-<!-- Include Chart.js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        // Tickets by Category Chart
+       
         var categoryData = @Html.Raw(Json.Serialize(ViewBag.TicketsByCategory));
         var ctx1 = document.getElementById('categoryChart').getContext('2d');
         new Chart(ctx1, {
-            type: 'pie',
+            type: 'doughnut',
             data: {
                 labels: categoryData.map(c => c.Category),
                 datasets: [{
                     data: categoryData.map(c => c.Count),
-                    backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745']
+                    backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745'],
+                    hoverOffset: 4
                 }]
             }
-        });
-
-        // Tickets Resolved per Admin Chart
+        });        
         var adminData = @Html.Raw(Json.Serialize(ViewBag.TicketsResolvedPerAdmin));
         var ctx2 = document.getElementById('adminChart').getContext('2d');
         new Chart(ctx2, {
@@ -138,6 +114,35 @@
                     data: adminData.map(a => a.Count),
                     backgroundColor: '#17a2b8'
                 }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                scales: {
+                    x: { beginAtZero: true }
+                }
+            }
+        });        
+        var ticketTrendsData = @Html.Raw(Json.Serialize(ViewBag.TicketTrends));
+        var ctx3 = document.getElementById('ticketTrendsChart').getContext('2d');
+        new Chart(ctx3, {
+            type: 'line',
+            data: {
+                labels: ticketTrendsData.map(t => t.Date),
+                datasets: [{
+                    label: 'New Tickets',
+                    data: ticketTrendsData.map(t => t.Count),
+                    borderColor: '#ff6384',
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
             }
         });
     });
