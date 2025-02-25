@@ -6,7 +6,6 @@
 
 <h2>My Tickets</h2>
 
-
 <div class="mb-3">
     <input type="text" id="searchBox" class="form-control" placeholder="Search tickets...">
     <select id="statusFilter" class="form-control mt-2">
@@ -17,9 +16,10 @@
     </select>
 </div>
 
-<table class="table table-bordered">
+<table class="table table-bordered" id="ticketsTable">
     <thead class="thead-dark">
         <tr>
+            <th style="display:none">ID</th>
             <th>Title</th>
             <th>Description</th>
             <th>Priority</th>
@@ -33,6 +33,7 @@
         @foreach (var ticket in Model)
         {
             <tr>
+                <td style="display:none">@ticket.Id</td>
                 <td>@ticket.Title</td>
                 <td>@ticket.Description</td>
                 <td><span class="badge bg-@(ticket.Priority == "High" ? "danger" : ticket.Priority == "Medium" ? "warning" : "success")">@ticket.Priority</span></td>
@@ -41,26 +42,51 @@
                 <td>@(ticket.AssignedAdmin != null ? ticket.AssignedAdmin.Name : "Not Assigned")</td>
                 <td>
                     <a class="btn btn-info btn-sm" asp-controller="Ticket" asp-action="Details" asp-route-id="@ticket.Id">View</a>
+                   <a class="btn btn-success btn-sm"
+                       asp-controller="Ticket"
+                       asp-action="ExportUserTicketToExcel"
+                       asp-route-id="@ticket.Id">
+                        Download Excel
+                    </a>
+
+                    <a class="btn btn-danger btn-sm"
+                       asp-controller="Ticket"
+                       asp-action="DownloadTicketPdf"
+                       asp-route-id="@ticket.Id">
+                        Download PDF
+                    </a>
                 </td>
             </tr>
         }
     </tbody>
 </table>
 
-<script>
-    document.getElementById("searchBox").addEventListener("input", function () {
-        var searchText = this.value.toLowerCase();
-        document.querySelectorAll("tbody tr").forEach(row => {
-            var title = row.cells[0].innerText.toLowerCase();
-            row.style.display = title.includes(searchText) ? "" : "none";
-        });
-    });
 
-    document.getElementById("statusFilter").addEventListener("change", function () {
-        var selectedStatus = this.value;
-        document.querySelectorAll("tbody tr").forEach(row => {
-            var status = row.cells[3].innerText;
-            row.style.display = selectedStatus === "" || status === selectedStatus ? "" : "none";
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        let table = $('#ticketsTable').DataTable({
+            "paging": true,
+            "searching": true,
+            "ordering": true,
+            "info": true,
+            "columnDefs": [
+                { "targets": 0, "visible": false } 
+            ]
+        });
+
+      
+        $('#searchBox').on('keyup', function () {
+            table.search(this.value).draw();
+        });
+
+        
+        $('#statusFilter').on('change', function () {
+            let selectedStatus = this.value;
+            table.column(4).search(selectedStatus).draw(); 
         });
     });
 </script>

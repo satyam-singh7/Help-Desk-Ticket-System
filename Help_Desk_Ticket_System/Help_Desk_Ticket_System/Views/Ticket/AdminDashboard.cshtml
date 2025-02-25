@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Help_Desk_Ticket_System.Models.Ticket>
+@{
     ViewData["Title"] = "Admin Dashboard";
 }
 
@@ -7,34 +8,34 @@
 <!-- Summary Cards -->
 <div class="row">
     <div class="col-md-4">
-        <div class="card text-white bg-primary mb-3">
-            <div class="card-header">Total Tickets</div>
+        <div class="card bg-primary text-white">
             <div class="card-body">
-                <h4 class="card-title">@Model.TotalTickets</h4>
+                <h5>Total Tickets</h5>
+                <h3>@ViewBag.TotalTickets</h3>
             </div>
         </div>
     </div>
     <div class="col-md-4">
-        <div class="card text-white bg-warning mb-3">
-            <div class="card-header">Pending Tickets</div>
+        <div class="card bg-warning text-dark">
             <div class="card-body">
-                <h4 class="card-title">@Model.PendingTickets</h4>
+                <h5>Pending Tickets</h5>
+                <h3>@ViewBag.PendingTickets</h3>
             </div>
         </div>
     </div>
     <div class="col-md-4">
-        <div class="card text-white bg-success mb-3">
-            <div class="card-header">Resolved Tickets</div>
+        <div class="card bg-success text-white">
             <div class="card-body">
-                <h4 class="card-title">@Model.ResolvedTickets</h4>
+                <h5>Resolved Tickets</h5>
+                <h3>@ViewBag.ResolvedTickets</h3>
             </div>
         </div>
     </div>
 </div>
 
 <!-- Filters -->
-<form asp-action="AdminDashboard" method="get">
-    <div class="row mb-3">
+<form asp-action="AdminDashboard" method="get" class="mt-3">
+    <div class="row">
         <div class="col-md-3">
             <select name="status" class="form-control">
                 <option value="">Filter by Status</option>
@@ -68,47 +69,76 @@
     </div>
 </form>
 
-<!-- Charts -->
-<div class="row">
+<!-- Tickets Table -->
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Priority</th>
+            <th>Category</th>
+            <th>Assigned Admin</th>
+            <th>Date Submitted</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ticket in Model)
+        {
+            <tr>
+                <td>@ticket.Title</td>
+                <td>@ticket.Status</td>
+                <td>@ticket.Priority</td>
+                <td>@ticket.Category</td>
+                <td>@(ticket.AssignedAdmin != null ? ticket.AssignedAdmin.Name : "Unassigned")</td>
+                <td>@ticket.DateSubmitted.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- Charts Section -->
+<div class="row mt-4">
     <div class="col-md-6">
-        <canvas id="ticketsByCategory"></canvas>
+        <h4>Tickets by Category</h4>
+        <canvas id="categoryChart"></canvas>
     </div>
     <div class="col-md-6">
-        <canvas id="ticketsByAdmin"></canvas>
+        <h4>Tickets Resolved per Admin</h4>
+        <canvas id="adminChart"></canvas>
     </div>
 </div>
 
-<!-- Chart.js -->
+<!-- Include Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
-    var ticketsByCategory = @Html.Raw(Json.Serialize(Model.TicketsByCategory));
-    var ticketsByAdmin = @Html.Raw(Json.Serialize(Model.TicketsByAdmin));
+    document.addEventListener("DOMContentLoaded", function () {
+        // Tickets by Category Chart
+        var categoryData = @Html.Raw(Json.Serialize(ViewBag.TicketsByCategory));
+        var ctx1 = document.getElementById('categoryChart').getContext('2d');
+        new Chart(ctx1, {
+            type: 'pie',
+            data: {
+                labels: categoryData.map(c => c.Category),
+                datasets: [{
+                    data: categoryData.map(c => c.Count),
+                    backgroundColor: ['#007bff', '#dc3545', '#ffc107', '#28a745']
+                }]
+            }
+        });
 
-    var ctx1 = document.getElementById('ticketsByCategory').getContext('2d');
-    new Chart(ctx1, {
-        type: 'bar',
-        data: {
-            labels: ticketsByCategory.map(x => x.Category),
-            datasets: [{
-                label: 'Tickets by Category',
-                data: ticketsByCategory.map(x => x.Count),
-                backgroundColor: 'rgba(54, 162, 235, 0.6)'
-            }]
-        }
-    });
-
-    var ctx2 = document.getElementById('ticketsByAdmin').getContext('2d');
-    new Chart(ctx2, {
-        type: 'pie',
-        data: {
-            labels: ticketsByAdmin.map(x => x.Admin),
-            datasets: [{
-                label: 'Tickets Resolved per Admin',
-                data: ticketsByAdmin.map(x => x.Count),
-                backgroundColor: ['#ff6384', '#36a2eb', '#ffcd56']
-            }]
-        }
+        // Tickets Resolved per Admin Chart
+        var adminData = @Html.Raw(Json.Serialize(ViewBag.TicketsResolvedPerAdmin));
+        var ctx2 = document.getElementById('adminChart').getContext('2d');
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: adminData.map(a => a.Admin),
+                datasets: [{
+                    label: 'Tickets Resolved',
+                    data: adminData.map(a => a.Count),
+                    backgroundColor: '#17a2b8'
+                }]
+            }
+        });
     });
 </script>
-
-
