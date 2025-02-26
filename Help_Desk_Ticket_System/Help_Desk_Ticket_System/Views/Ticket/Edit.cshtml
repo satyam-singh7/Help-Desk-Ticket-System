@@ -1,23 +1,22 @@
-﻿@model Help_Desk_Ticket_System.Models.Ticket
+﻿ @model Help_Desk_Ticket_System.Models.Ticket
 
 @{
     ViewData["Title"] = "Edit Ticket";
 }
+
 <h2>Edit Ticket</h2>
 
-<form asp-controller="Ticket" asp-action="Edit" method="post">
+<form id="editTicketForm">
     <input type="hidden" asp-for="Id" />
 
     <div class="form-group">
         <label>Title</label>
         <input asp-for="Title" class="form-control" required />
-        <span asp-validation-for="Title" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label>Description</label>
         <textarea asp-for="Description" class="form-control" required></textarea>
-        <span asp-validation-for="Description" class="text-danger"></span>
     </div>
 
     <div class="form-group">
@@ -27,13 +26,11 @@
             <option value="Medium">Medium</option>
             <option value="High">High</option>
         </select>
-        <span asp-validation-for="Priority" class="text-danger"></span>
     </div>
 
     <div class="form-group">
         <label>Category</label>
         <input asp-for="Category" class="form-control" required />
-        <span asp-validation-for="Category" class="text-danger"></span>
     </div>
 
     <div class="form-group">
@@ -45,18 +42,32 @@
         </select>
     </div>
 
-    <div class="form-group">
-        <label>Assign Admin</label>
-        <select asp-for="AssignedAdminId" class="form-control">
-            <option value="">Select Admin</option>
-            @foreach (var admin in ViewBag.Admins)
-            {
-                <option value="@admin.Id">@admin.Name</option>
-            }
-        </select>
-    </div>
-
     <button type="submit" class="btn btn-primary">Update Ticket</button>
 </form>
 
 <a asp-controller="Ticket" asp-action="Index">Back to Ticket List</a>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+        $("#editTicketForm").submit(function (e) {
+            e.preventDefault();
+
+            var formData = $(this).serialize();
+
+            $.ajax({
+                url: '/Ticket/Edit',
+                type: 'POST',
+                data: formData,
+                success: function () {
+                    alert("Ticket updated successfully!");
+                    window.location.href = "/Ticket/Index"; // Redirect to ticket list
+                },
+                error: function (xhr) {
+                    alert("Error updating ticket: " + xhr.responseText);
+                }
+            });
+        });
+    });
+</script>

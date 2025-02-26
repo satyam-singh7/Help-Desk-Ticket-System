@@ -44,11 +44,45 @@ namespace Help_Desk_Ticket_System.Controllers
                 tickets = tickets.Where(t => t.Status == status);
             }
 
-            var statuses = _context.Tickets.Select(t => t.Status).Distinct().ToList();
+            var statuses = _context.Tickets
+                .Select(t => t.Status)
+                .Distinct()
+                .Where(s => !string.IsNullOrEmpty(s))
+                .ToList();
+
             ViewBag.Statuses = new SelectList(statuses);
 
-            return View(tickets.ToList());
+            var ticket = tickets.ToList();           
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return Json(tickets);
+            }
+
+            return View(tickets);
         }
+        [HttpGet]
+        public JsonResult GetTickets()
+        {
+            var tickets = _context.Tickets
+                .Include(t => t.AssignedAdmin)
+                .Include(t => t.User)
+                .Select(t => new
+                {
+                    t.Id,
+                    t.Title,
+                    t.Description,
+                    t.Priority,
+                    t.Status,
+                    t.Category,
+                    UserName = t.User != null ? t.User.Name : "Unknown",
+                    AssignedAdmin = t.AssignedAdmin != null ? t.AssignedAdmin.Name : "Not Assigned",
+                    DateSubmitted = t.DateSubmitted.ToString("yyyy-MM-dd")
+                })
+                .ToList();
+
+            return Json(tickets);
+        }
+
         public IActionResult Details(int id)
         {
            
@@ -225,7 +259,6 @@ namespace Help_Desk_Ticket_System.Controllers
 
                 _emailService.SendEmail(user.Email, subject, body);
             }
-
             return RedirectToAction("Index");
         }
         public IActionResult AdminDashboard(string status, string priority, int? assignedAdmin)
